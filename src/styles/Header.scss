@@ -1,0 +1,11 @@
+@import "~bootstrap/scss/bootstrap";
+body{
+  background: #6E6E6E !important;
+}
+.nav-item:not(.logo){
+  &:hover{
+    a{
+      background: rgba(#B1B1B1, 0.2) !important;
+    }
+  }
+}
