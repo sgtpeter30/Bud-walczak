@@ -1,0 +1,110 @@
+@import "~bootstrap/scss/bootstrap";
+$primary: #0F4c81;
+$secondary: #FF7600;
+
+$gray_light: #707070;
+$gray_dark: #3e3e3e;
+
+$theme-colors: (
+  "primary": #0F4c81,
+  "secondary": #FF7600,
+);
+
+$utilities: (
+  "bg-main-light-gray": (
+    class: bg-main-light-gray,
+    property: background-color,
+    values: (
+      clear: $gray_light,
+      opacity-0: rgba($gray_light, 0),
+      opacity-25: rgba($gray_light, .25),
+      opacity-50: rgba($gray_light, .5),
+      opacity-75: rgba($gray_light, .75),
+      opacity-90: rgba($gray_light, .9)
+    )
+  ),
+  "bg-main-dark-gray": (
+    class: bg-main-dark-gray,
+    property: background-color,
+    values: (
+      clear: $gray_dark,
+      opacity-0: rgba($gray_dark, 0),
+      opacity-25: rgba($gray_dark, .25),
+      opacity-50: rgba($gray_dark, .5),
+      opacity-75: rgba($gray_dark, .75)
+    )
+  ),
+  "opacity": (
+    property: opacity,
+    values: (
+      0: 0,
+      25: .25,
+      50: .5,
+      75: .75,
+      100: 1,
+    )
+  ),
+  "bg-opacity-primary": (
+    property: background-color,
+    class: bg-opacity-primary,
+    values: (
+      0: rgba($primary, 0),
+      25: rgba($primary, .25),
+      50: rgba($primary, .5),
+      75: rgba($primary, .75),
+      100: rgba($primary, 1),
+    )
+  ),
+  "bg-opacity-secondary": (
+    property: background-color,
+    class: bg-opacity-secondary,
+    values: (
+      0: rgba($secondary, 0),
+      25: rgba($secondary, .25),
+      50: rgba($secondary, .5),
+      75: rgba($secondary, .75),
+      100: rgba($secondary, 1),
+    )
+  ),
+  "viewport-width": (
+      property: width,
+      class: vw,
+      values: (
+        50: 50vw
+      )
+    ),
+  "viewport-height": (
+      property: height,
+      class: vh,
+      responsive: true,
+      values: (
+        100: 100vh,
+        50: 50vh,
+      )
+    ),
+    "width": (
+      property: width,
+      class: w,
+      responsive: true,
+      values: (
+        25: 25%,
+        50: 50%,
+        75: 75%,
+        100: 100%,
+        auto: auto
+      )
+    ),
+    "position": (
+      property: position,
+      responsive: true,
+      values: static relative absolute fixed sticky
+    ),
+);
+@import "~bootstrap/scss/bootstrap";
+
+#container{
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  flex-wrap: wrap;
+}

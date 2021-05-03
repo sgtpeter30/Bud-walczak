@@ -1,0 +1,25 @@
+$utilities: (
+"bg-opacity-primary": (
+    property: background-color,
+    // values: map-merge(
+    //   map-get($theme-colors, "primary"),
+    //   (
+    //     // "body": $body-bg,
+    //     // "white": $white,
+    //     // "transparent": transparent
+    //     0: rgba($primary, 0),
+    //     25: rgba($primary, .25),
+    //     50: rgba($primary, .5),
+    //     75: rgba($primary, .75),
+    //     100: rgba($primary, 1),
+    //   )
+    // )
+    values: (
+      0: rgba($primary, 0),
+      25: rgba($primary, .25),
+      50: rgba($primary, .5),
+      75: rgba($primary, .75),
+      100: rgba($primary, 1),
+    )
+  )
+);

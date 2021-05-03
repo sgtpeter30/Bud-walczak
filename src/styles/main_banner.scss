@@ -1,0 +1,33 @@
+#main_banner{
+  overflow: hidden !important;
+  @media (min-width: 992px) {
+    &>div{
+      &:nth-child(1){
+        clip-path: polygon(0 0, 40% 0, 65% 100%, 0 100%);
+        left: -5px;
+      }
+      &:nth-child(2){
+        clip-path: polygon(40% 0, 100% 0, 100% 100%, 65% 100%);
+        right: -5px;
+      }
+    }
+  }
+  a{
+    &:hover{
+      picture{
+        opacity: 1 !important;
+        transform: scale(1.1);
+      }
+    }
+    &.banner_2{
+      right: 0;
+    }
+    &>div{
+      z-index: 1;
+    }
+  }
+  picture{
+    transition: all .2s;
+    z-index: -1;
+  }
+}
