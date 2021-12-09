@@ -1,13 +1,17 @@
 @import "~bootstrap/scss/bootstrap";
-$primary: #0F4c81;
-$secondary: #FF7600;
+
+$primary: #feba00;
 
 $gray_light: #707070;
 $gray_dark: #3e3e3e;
+$gray_dimmed: #B1B1B1;
+
+$main_gray: #2b2a27;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
 $theme-colors: (
-  "primary": #0F4c81,
-  "secondary": #FF7600,
+  "primary": #feba00,
+  "gray_dimmed": #B1B1B1,
 );
 
 $utilities: (
@@ -69,8 +73,10 @@ $utilities: (
   "viewport-width": (
       property: width,
       class: vw,
+      responsive: true,
       values: (
-        50: 50vw
+        50: 50vw,
+        100: 100vw,
       )
     ),
   "viewport-height": (
@@ -100,11 +106,119 @@ $utilities: (
       values: static relative absolute fixed sticky
     ),
 );
+a:hover{
+  color: $primary !important;
+}
 @import "~bootstrap/scss/bootstrap";
-
+body {
+  font-family: 'Lato' !important;
+}
 #container{
   display: flex;
   justify-content: center;
   width: 100vw;
   flex-wrap: wrap;
+}
+
+.container_main{
+  background: #fff;
+  margin: 2rem auto;
+  @media (min-width: 992px) {
+    margin: 3rem auto;
+  }
+  .big_label{
+    background-color: #F5F5F5;
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
+    -moz-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
+    margin-bottom: 45px;
+    h1{
+      font-size: 20px;
+      padding: 30px 60px;
+      color: #505050;
+      margin: 0;
+    }
+  }
+}
+.container_inner{
+  padding: 0 15px 15px;
+  @media (min-width: 992px) {
+    padding: 0 60px 30px;
+  }
+  span{
+    padding: 0;
+  }
+}
+.certificate{
+  margin-top: 20px;
+  span{
+    margin-right: 20px;
+  }
+}
+
+
+
+// Ikony
+@font-face {
+  font-family: 'Fontello';
+  src: url('./fontello/fontello.eot'); /* IE9 Compat Modes */
+  src: url('./fontello/fontello.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fontello/fontello.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./fontello/fontello.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('./fontello/fontello.svg#svgFontName') format('svg'); /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon"] {
+  font-family: 'Fontello' !important;
+  font-style: normal !important;
+  margin-right: 0.5rem;
+  margin-left: 1rem;
+}
+.icon {
+  &-mark:before{
+    content: '\e800';
+  }
+  &-mail:before{
+    content: '\e801';
+  }
+  &-phone:before{
+    content: '\e802';
+  }
+  &-menu-mobile:before{
+    content: '\e804';
+  }
+  &-house:before{
+    content: '\e805';
+    content: '\e806';
+  }
+  &-tools:before{
+    content: '\e807';
+    content: '\e808';
+  }
+  &-brick:before{
+    content: '\e809';
+  }
+  &-garden:before{
+    content: '\e81a';
+  }
+}
+img{
+  max-width: 100%;
+}
+h1{
+  // color: #707070;
+  width: max-content;
+  font-size: calc(1.325rem + 0.9vw);
+}
+h2{
+  width: max-content;
+  font-size: 26px;
+}
+#root{
+  overflow: hidden;
+}
+p,a, span{
+  // color: #707070;
+  text-decoration: none;
 }

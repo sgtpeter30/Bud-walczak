@@ -1,9 +1,10 @@
 import Picture from "../atoms/Picture";
+import { Link } from 'react-router-dom';
 import '../styles/main_banner.scss';
 
 const Main_banner = () => {
   const banner_1 = {
-    title: 'Wypożyczenie sprzętu',
+    title: 'Wypożyczenia',
     link: '/equipment',
     image: {
       path:"/banners/main_page/banner_1",
@@ -12,7 +13,7 @@ const Main_banner = () => {
     }
   };
   const banner_2 = {
-    title: 'Usługi budowlane',
+    title: 'Budowa domów',
     link: '/houses',
     image: {
       path:"/banners/main_page/banner_1",
@@ -24,22 +25,22 @@ const Main_banner = () => {
     
       <div id="main_banner" className="vw-100 vh-100 d-flex flex-wrap align-items-center position-relative">
         {/* obraz 1 */}
-        <div className="d-flex vh-50 vh-lg-100 vw-100 position-relative position-lg-absolute">
-          <a target="_self" href={banner_1.link} title={banner_1.title} className="banner_1 d-flex">
-            <div className="position-absolute w-100 d-flex px-5 py-2 py-lg-5 mt-5 bg-opacity-secondary-75">
+        <div className="main_banner_wrapper d-flex vh-50 vh-lg-100 vw-100 vw-lg-50 position-relative">
+          <Link target="_self" to={banner_1.link} title={banner_1.title} className="banner_1 d-flex justify-content-center w-100">
+            <div className="main_banner_title position-absolute w-100 px-5 py-2 d-flex bg-opacity-primary-75 justify-content-start">
               <h2 className="text-white">{banner_1.title}</h2>
             </div>
-            <Picture image={banner_1.image} text={banner_1.title} classPicture="d-flex justify-content-start opacity-75"/>
-          </a>
+            <Picture image={banner_1.image} text={banner_1.title} classPicture="d-flex justify-content-center"/>
+          </Link>
         </div>
         {/* obraz 2 */}
-        <div className="d-flex vh-50 vh-lg-100 vw-100 position-relative position-lg-absolute justify-content-end">
-          <a target="_self" href={banner_2.link} title={banner_2.title} className="banner_2 d-flex justify-content-end">
-            <div className="position-absolute w-100 px-5 py-2 py-lg-5 bottom-0 mb-5 d-flex bg-opacity-primary-75 justify-content-end">
+        <div className="main_banner_wrapper d-flex vh-50 vh-lg-100 vw-100 vw-lg-50 position-relative">
+          <Link target="_self" to={banner_2.link} title={banner_2.title} className="banner_2 d-flex justify-content-center w-100">
+            <div className="main_banner_title position-absolute w-100 px-5 py-2 d-flex bg-opacity-primary-75 justify-content-end">
               <h2 className="text-white">{banner_2.title}</h2>
             </div>
-            <Picture image={banner_2.image} text={banner_2.title} classPicture="d-flex justify-content-end opacity-75"/>
-          </a>
+            <Picture image={banner_2.image} text={banner_2.title} classPicture="d-flex"/>
+          </Link>
         </div>
       </div>
     

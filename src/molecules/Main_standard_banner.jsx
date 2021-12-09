@@ -4,7 +4,7 @@ import Blazy from "blazy";
 import banner_1 from "../images/banners/main_page/banner_1/image_1.jpg";
 import banner_2 from "../images/banners/main_page/banner_1/image_2.jpg";
 import spinner from "../icons/spinner_1.svg";
-import '../styles/Main_standard_banner.scss';
+// import '../styles/Main_standard_banner.scss';
 
 const Main_standard_banner = () => {
   const bLazy = new Blazy();

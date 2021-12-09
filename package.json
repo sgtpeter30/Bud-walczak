@@ -1,8 +1,7 @@
 {
-  "homepage": "https://sgtpeter30.github.io/bud-walczak",
   "name": "bud_walczak",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "proxy": "http://localhost:3000",
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
@@ -11,11 +10,13 @@
     "blazy": "^1.8.2",
     "bootstrap": "^5.0.0-beta3",
     "http-proxy-middleware": "^1.3.1",
+    "leaflet": "^1.7.1",
     "node-sass": "^5.0.0",
     "react": "^17.0.2",
     "react-bootstrap": "^1.5.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
+    "react-router-hash-link": "^2.4.3",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.1"
   },

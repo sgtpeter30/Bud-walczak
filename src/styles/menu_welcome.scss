@@ -1,0 +1,11 @@
+.menu_main_page{
+  position: absolute;
+  width: 150px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @media (min-width: 992px) {
+    top: 25%;
+    width: 450px;
+  }
+}

@@ -1,0 +1,19 @@
+#gallery{
+  text-align: center;
+  h2{
+    font-size: 26px;
+  }
+  .gallery_wrapper{
+    padding-bottom: 2rem;
+    // margin-bottom: 2rem;
+    margin: 0 auto 2rem;
+    // border-bottom: 1px solid #707070;
+  }
+  [class^="col-"] {
+
+    padding: 0 calc(var(--bs-gutter-x) / 2);
+    @media (min-width: 992px) {
+      padding: calc(var(--bs-gutter-x) / 2);
+    }
+  }
+}
