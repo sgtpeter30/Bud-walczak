@@ -1,5 +1,4 @@
 import React, { useState, useMemo, useEffect, useReducer, useContext } from "react";
-// import { BrowserRouter as Router, Redirect, Route, useLocation } from "react-router-dom";
 import { HashRouter as Router, Redirect, Route, useLocation } from 'react-router-dom'
 import Blazy from "blazy";
 import Main_banner from './molecules/Main_banner';
