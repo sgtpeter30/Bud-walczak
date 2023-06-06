@@ -1,0 +1,12 @@
+<picture class="{{classPicture}}">
+  <source media="(min-width:979px)" 
+    data-srcset="../../assets/img{{image.path}}/{{image.name}}_big.{{image.extension}}"
+  />
+  <source media="(min-width:757px)" data-srcset="../../assets/img{{image.path}}/{{image.name}}_medium.{{image.extension}}"/>
+  <img 
+    src="../../assets/icons/spinner_1.svg" 
+    alt={{text}} 
+    class="b-lazy img-fluid" 
+    data-src="../../assets/img{{image.path}}/{{image.name}}_small.{{image.extension}}"
+  />
+</picture>

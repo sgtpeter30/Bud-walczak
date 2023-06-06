@@ -1,0 +1,117 @@
+@import "../../assets/variables";
+
+#contact{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @media (min-width: 920px) {
+    background: $primary;
+  }
+  .container_inner{
+    padding-bottom: 0 !important;
+  }
+  #maps_container{
+    position: relative;
+    width: 100%;
+    // height: 600px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    @media (min-width: 920px) {
+      height: 800px;
+    }
+  }
+  #map_shadow{
+    // background: url('../images/background/blurred_map.png');
+    background: url('../../assets/img/background/blurred_map.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 800px;
+    width: 100%;
+    padding: 0;
+    background-color: #333;
+    opacity: 1;
+    filter: blur(3px);
+    transform: scale(1.1);
+
+    // z-index: 1000;
+    &:before{
+      content: '';
+      display: flex;
+      width: 100%;
+      height: 100%;
+      // border: 100px solid #333;
+      background: #333;
+      opacity: .8;
+    }
+  }
+  .contact-data{
+    width: 100%;
+    background: $main_gray;
+    color: #fff !important;
+    padding: 50px;
+    @media (min-width: 920px) {
+      width: 450px;
+      z-index: 100;
+      margin-bottom: -150px;
+      margin-top: 30px;
+      position: relative;
+    }
+    h2{
+      color: $primary;
+      margin-bottom: 20px;
+      // &:hover{
+      //   color: #fff;
+      // }
+    }
+    a, span{
+      color: #fff;
+    }
+    i{
+      color: $primary;
+    }
+    &>span{
+      width: 100%;
+      @media (min-width: 920px) {
+        padding: 0 60px;
+      }
+      &:hover{
+        a{
+          color: $primary;
+        }
+      }
+    }
+    .icon-phone:before{
+      color: $main_gray !important;
+      text-shadow: -2px 0 $primary, 0 2px $primary, 2px 0 $primary, 0 -2px $primary;
+    }
+  }
+}
+#contact_map{
+  height: 400px;
+}
+
+.contact-data{
+  i{
+    font-size: 1.5rem;
+    margin-right: 1.5rem;
+    width: 30px;
+    max-width: 30px;
+    min-width: 30px;
+  }
+  .icon-phone:before{
+    color: #fff !important;
+    text-shadow: -2px 0 #707070, 0 2px #707070, 2px 0 #707070, 0 -2px #707070;
+  }
+  .icon-mail:before{
+    font-size: 1.2rem;
+  }
+  .icon-mark:before{
+    font-size: 1.8rem;
+  }
+}
+// #707070

@@ -1,0 +1,27 @@
+$primary: #feba00;
+$secondary: #2b2a27;
+footer{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  background: $secondary;
+  padding: 20px 0;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid $primary;
+  span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffbb008e;
+    
+  }
+  a{
+    // color: #212529;
+    color: #ffbb008e;
+    padding: 0 5px;
+    &:hover{
+      color: $primary;
+    }
+  }
+}

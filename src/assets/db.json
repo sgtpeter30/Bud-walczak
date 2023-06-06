@@ -1,0 +1,39 @@
+{
+  "menu": {
+    "equipment": 
+    [
+      {
+        "link": "gallery" ,
+        "name": "Galeria"
+      },
+      {
+        "link": "about-us" ,
+        "name": "O firmie"
+      },
+      {
+        "link": "contact" ,
+        "name": "Kontakt"
+      }
+    ],
+    "homes": [
+      {
+        "link": "about-us" ,
+        "name": "O firmie"
+      },
+      {
+        "link": "contact" ,
+        "name": "Kontakt"
+      }
+    ]
+  },
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

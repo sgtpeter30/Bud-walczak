@@ -1,0 +1,102 @@
+@import "../../assets/variables";
+
+#houses{
+  // color: #707070;
+  // background: $primary;
+  [class^="col-"] {
+    padding: 0;
+  }
+  text-align: center;
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    background-image: url('../../assets/img/background/blueprint.jpg');
+    background: url('../../assets/img/background/property.jpg');
+    // opacity: .5;
+    background-position: center;
+    width: 100vw;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    top: 0;
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    background: $primary;
+    width: 100vw;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    top: 0;
+    opacity: 0.9;
+  }
+  .icon-wrapper{
+    display: flex;
+    width: 80px;
+    height: 80px;
+    background: $main_gray;
+    // background: #fff;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 0;
+
+    i{
+      color: #fff;
+      color: $primary;
+      font-size: 3rem;
+      position: relative;
+      margin: 0;
+    }
+  }
+  ul{
+    font-size: 20px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 0;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    @media (min-width: 992px) {
+      margin-top: 30px;
+    }
+    li{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      line-height: 25px;
+      @media (min-width: 992px) {
+        line-height: 30px;
+      }
+    }
+  }
+}
+#gallery{
+  text-align: center;
+  h2{
+    font-size: 26px;
+  }
+  .gallery_wrapper{
+    padding-bottom: 2rem;
+    // margin-bottom: 2rem;
+    margin: 0 auto 2rem;
+    // border-bottom: 1px solid #707070;
+  }
+  [class^="col-"] {
+
+    padding: 0 12px;
+    @media (min-width: 992px) {
+      padding: 12px;
+    }
+    // padding: 0 calc(var(--bs-gutter-x) / 2);
+    // @media (min-width: 992px) {
+    //   padding: calc(var(--bs-gutter-x) / 2);
+    // }
+  }
+}

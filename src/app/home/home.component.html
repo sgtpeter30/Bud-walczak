@@ -1,0 +1,14 @@
+<div id="main_banner" class="vw-100 vh-100 d-flex flex-wrap align-items-center position-relative">
+  <div class="main_banner_wrapper d-flex vh-50 vh-lg-100 vw-100 vw-lg-50 position-relative" *ngFor="let banner of banners">
+    <a target="_self" routerLink={{banner.link}} title={{banner.title}} class="d-flex justify-content-center w-100">
+      <div class="main_banner_title position-absolute w-100 px-5 py-2 d-flex bg-opacity-primary-75">
+        <h2 class="text-white">{{banner.title}}</h2>
+      </div>
+      <app-pictures [image]=banner.image [text]=banner.title classPicture="d-flex justify-content-center"></app-pictures>
+    </a>
+  </div>
+</div>
+
+<div class="menu_main_page d-flex flex-wrap justify-content-center align-items-center">
+  <img src="../../assets/icons/logo.png" alt="bud-walczak_logo" />
+</div>

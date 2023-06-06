@@ -1,0 +1,69 @@
+<div id="houses" class="container">
+  <div class="w-100 py-1 fw-bold pt-3 mt-3 mb-3 d-flex justify-content-center text-uppercase">
+    <h2 class="pt-3 pb-2">Zakres usług</h2>
+  </div>
+  <div class="d-flex container_inner justify-content-md-center flex-wrap">
+    <div class="col-12 col-md-3 d-flex flex-wrap justify-content-center align-items-start align-content-start">
+      <div class="icon-wrapper">
+        <i class="icon-house"></i>
+      </div>
+      <ul>
+        <li>budowa domów</li>
+        <li>stany surowe</li>
+      </ul>
+    </div>
+    <div class="col-12 col-md-3 d-flex flex-wrap justify-content-center align-items-start align-content-start">
+      <div class="icon-wrapper">
+        <i class="icon-brick"></i>
+      </div>
+      <ul>
+        <li>dachy</li>
+        <li>elewacje</li>
+        <li>szalunki</li>
+        <li>rusztowania</li>
+      </ul>
+    </div>
+    <div class="col-12 col-md-3 d-flex flex-wrap justify-content-center align-items-start align-content-start">
+      <div class="icon-wrapper">
+        <i class="icon-garden"></i>
+      </div>
+      <ul>
+        <li>roboty ziemne</li>
+        <li>ogrodzenia</li>
+      </ul>
+    </div>
+    <div class="col-12 col-md-3 d-flex flex-wrap justify-content-center align-items-start align-content-start">
+      <div class="icon-wrapper">
+        <i class="icon-tools"></i>
+      </div>
+      <ul>
+        <li>wynajem szalunków stropowych</li>
+        <li>wynajem rusztowań</li>
+        <li>wynajem sprzętu budowlanego</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="gallery" class="container_main container">
+  <div class="d-flex flex-wrap w-100 gallery_wrapper">
+    <span class="d-flex w-100 py-1 fw-bold mb-3 justify-content-center">
+      <h2 class="pb-2 text-uppercase">
+        Inwestycje zrealizowane
+      </h2>
+    </span>
+    <div class="col-12 col-md-3 mb-3 mb-md-0" *ngFor="let house of gallery1">
+      <img src="../../assets/img/gallery/done/{{house}}.jpg"/>
+    </div>
+  </div>
+  <div class="d-flex w-100 d-flex flex-wrap gallery_wrapper">
+    <span class="d-flex w-100 py-1 fw-bold mb-3 justify-content-center">
+      <h2 class="pb-2 text-uppercase">
+        Inwestycje w realizacji
+      </h2>
+    </span>
+    <div class="col-12 col-md-3 mb-3 mb-md-0" *ngFor="let house of gallery2">
+      <img src="../../assets/img/gallery/in_progress/{{house}}.jpg"/>
+    </div>
+  </div>
+</div>

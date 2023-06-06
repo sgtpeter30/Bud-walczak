@@ -1,1 +1,231 @@
 /* You can add global styles to this file, and also import other style files */
+// @import '../node_modules/primeng/resources/themes/bootstrap4-dark-purple/theme.css';
+// @import '~bootstrap/dist/css/bootstrap.min.css';
+// body {
+//   background-color: var(--surface-a);
+//   font-family: var(--font-family);
+//   color: var(--text-color);
+// }
+// a:not(.p-button){
+//   color: var(--primary-color);
+//   text-decoration: none;
+//   &:visited, &:hover{
+//     color: var(--text-color);
+//   }
+// }
+
+@import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import "./assets/variables";
+
+$utilities: (
+  "bg-main-light-gray": (
+    class: bg-main-light-gray,
+    property: background-color,
+    values: (
+      clear: $gray_light,
+      opacity-0: rgba($gray_light, 0),
+      opacity-25: rgba($gray_light, .25),
+      opacity-50: rgba($gray_light, .5),
+      opacity-75: rgba($gray_light, .75),
+      opacity-90: rgba($gray_light, .9)
+    )
+  ),
+  "bg-main-dark-gray": (
+    class: bg-main-dark-gray,
+    property: background-color,
+    values: (
+      clear: $gray_dark,
+      opacity-0: rgba($gray_dark, 0),
+      opacity-25: rgba($gray_dark, .25),
+      opacity-50: rgba($gray_dark, .5),
+      opacity-75: rgba($gray_dark, .75)
+    )
+  ),
+  "opacity": (
+    property: opacity,
+    values: (
+      0: 0,
+      25: .25,
+      50: .5,
+      75: .75,
+      100: 1,
+    )
+  ),
+  "bg-opacity-primary": (
+    property: background-color,
+    class: bg-opacity-primary,
+    values: (
+      0: rgba($primary, 0),
+      25: rgba($primary, .25),
+      50: rgba($primary, .5),
+      75: rgba($primary, .75),
+      100: rgba($primary, 1),
+    )
+  ),
+  "bg-opacity-secondary": (
+    property: background-color,
+    class: bg-opacity-secondary,
+    values: (
+      0: rgba($secondary, 0),
+      25: rgba($secondary, .25),
+      50: rgba($secondary, .5),
+      75: rgba($secondary, .75),
+      100: rgba($secondary, 1),
+    )
+  ),
+  "viewport-width": (
+      property: width,
+      class: vw,
+      responsive: true,
+      values: (
+        50: 50vw,
+        100: 100vw,
+      )
+    ),
+  "viewport-height": (
+      property: height,
+      class: vh,
+      responsive: true,
+      values: (
+        100: 100vh,
+        50: 50vh,
+      )
+    ),
+    "width": (
+      property: width,
+      class: w,
+      responsive: true,
+      values: (
+        25: 25%,
+        50: 50%,
+        75: 75%,
+        100: 100%,
+        auto: auto
+      )
+    ),
+    "position": (
+      property: position,
+      responsive: true,
+      values: static relative absolute fixed sticky
+    ),
+);
+html{
+  overflow-x: hidden;
+}
+a:hover{
+  color: $primary !important;
+}
+@import "~bootstrap/scss/bootstrap";
+body {
+  font-family: 'Lato' !important;
+}
+#container{
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  flex-wrap: wrap;
+}
+
+.container_main{
+  background: #fff;
+  margin: 2rem auto;
+  @media (min-width: 992px) {
+    margin: 3rem auto;
+  }
+  .big_label{
+    background-color: #F5F5F5;
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
+    -moz-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
+    margin-bottom: 45px;
+    h1{
+      font-size: 20px;
+      padding: 30px 60px;
+      color: #505050;
+      margin: 0;
+    }
+  }
+}
+.container_inner{
+  padding: 0 15px 15px;
+  @media (min-width: 992px) {
+    padding: 0 60px 30px;
+  }
+  span{
+    padding: 0;
+  }
+}
+.certificate{
+  margin-top: 20px;
+  span{
+    margin-right: 20px;
+  }
+}
+
+
+
+// Ikony
+@font-face {
+  font-family: 'Fontello';
+  src: url('./assets/fontello/fontello.eot'); /* IE9 Compat Modes */
+  src: url('./assets/fontello/fontello.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./assets/fontello/fontello.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./assets/fontello/fontello.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('./assets/fontello/fontello.svg#svgFontName') format('svg'); /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon"] {
+  font-family: 'Fontello' !important;
+  font-style: normal !important;
+  margin-right: 0.5rem;
+  margin-left: 1rem;
+}
+.icon {
+  &-mark:before{
+    content: '\e800';
+  }
+  &-mail:before{
+    content: '\e801';
+  }
+  &-phone:before{
+    content: '\e802';
+  }
+  &-menu-mobile:before{
+    content: '\e804';
+  }
+  &-house:before{
+    content: '\e805';
+    content: '\e806';
+  }
+  &-tools:before{
+    content: '\e807';
+    content: '\e808';
+  }
+  &-brick:before{
+    content: '\e809';
+  }
+  &-garden:before{
+    content: '\e81a';
+  }
+}
+img{
+  max-width: 100%;
+}
+h1{
+  // color: #707070;
+  width: max-content;
+  font-size: calc(1.325rem + 0.9vw);
+}
+h2{
+  width: max-content;
+  font-size: 26px;
+}
+#root{
+  overflow: hidden;
+}
+p,a, span{
+  // color: #707070;
+  text-decoration: none;
+}

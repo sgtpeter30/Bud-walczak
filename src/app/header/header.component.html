@@ -1,0 +1,18 @@
+<header class="d-flex flex-wrap align-content-start py-0">
+  <div class="container d-flex flex-wrap main_menu">
+    <div class="col-4 logo d-flex justify-content-center align-items-start">
+      <a href="/"><img src="../../assets/icons/logo.png" alt="bud-walczak_logo" /></a>
+    </div>
+    <div class="d-flex col-8 flex-wrap main_menu_wrapper">
+      <i id="menu_open" class="icon-menu-mobile d-flex d-md-none align-items-center"></i>
+      <ul id="menu_categories" class="d-flex w-100 flex-wrap flex-md-nowrap justify-content-end align-content-start align-items-center container">
+        <li *ngFor="let item of menu$">
+          <a (click)="scrollTo(item.link)" class="btn text-center text-uppercase h-100 scrollTo">
+            {{item.name}}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <aside class="d-none flex-wrap"></aside>
+</header>
